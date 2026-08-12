@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>PDF RAG Chatbot</title></head>
+<body>
+<h1>Ask about the document</h1>
+<form method="post" th:action="@{/chat}">
+    <input type="text" name="question" th:value="${question}" style="width:400px" required/>
+    <button type="submit">Ask</button>
+</form>
+
+<div th:if="${answer}">
+    <h3>Answer</h3>
+    <p th:text="${answer}"></p>
+</div>
+</body>
+</html>
