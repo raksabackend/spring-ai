@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Document Summary</title></head>
+<body>
+<h1>Structured Document Summary</h1>
+<p><b>Title:</b> <span th:text="${summary.title()}"></span></p>
+<p><b>Category:</b> <span th:text="${summary.category()}"></span></p>
+<p><b>Target Audience:</b> <span th:text="${summary.targetAudience()}"></span></p>
+<p><b>Key Topics:</b></p>
+<ul>
+    <li th:each="topic : ${summary.keyTopics()}" th:text="${topic}"></li>
+</ul>
+<a href="/">Back to chat</a>
+</body>
+</html>
